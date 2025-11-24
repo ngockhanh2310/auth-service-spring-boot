@@ -13,14 +13,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/permissions")
-@RequiredArgsConstructor // Thay thế @Autowired
+@RequiredArgsConstructor
 @Slf4j
 public class PermissionController {
     final PermissionRepository permissionRepository;
     final PermissionService permissionService;
 
     @PostMapping
-    ApiResponse<PermissionResponse> create(@RequestBody PermissionRequest request) { // @RequestBody dùng để nhận dữ liệu từ client
+    ApiResponse<PermissionResponse> create(@RequestBody PermissionRequest request) {
         return ApiResponse.<PermissionResponse>builder()
                 .result(permissionService.create(request))
                 .build();
@@ -34,7 +34,7 @@ public class PermissionController {
     }
 
     @DeleteMapping("/{permissionId}")
-    ApiResponse<Void> delete(@PathVariable String permissionId) { // @PathVariable dùng để nhận dữ liệu từ client
+    ApiResponse<Void> delete(@PathVariable String permissionId) {
         permissionService.delete(permissionId);
         return ApiResponse.<Void>builder().build();
     }

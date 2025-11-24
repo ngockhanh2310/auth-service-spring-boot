@@ -134,21 +134,17 @@
                 <configuration>
                     <source>{java.version}</source>
                     <target>{java.version}</target>
-                    <!-- Quan trọng: Thứ tự annotation processor -->
                     <annotationProcessorPaths>
-                        <!-- Lombok phải được xử lý TRƯỚC -->
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
                             <version>${lombok.version}</version>
                         </path>
-                        <!-- Lombok-MapStruct binding -->
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok-mapstruct-binding</artifactId>
                             <version>${lombok-mapstruct-binding.version}</version>
                         </path>
-                        <!-- MapStruct processor được xử lý SAU -->
                         <path>
                             <groupId>org.mapstruct</groupId>
                             <artifactId>mapstruct-processor</artifactId>

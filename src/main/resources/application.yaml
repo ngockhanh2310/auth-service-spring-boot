@@ -13,9 +13,9 @@ spring:
     name: demo-application
 
   datasource:
-    url: jdbc:mysql://localhost:3304/identity_service
+    url: jdbc:mysql://localhost:3307/identity_service
     username: root
-    password:
+    password: mysql_pw
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:

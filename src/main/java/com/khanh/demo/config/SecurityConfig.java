@@ -1,6 +1,7 @@
 package com.khanh.demo.config;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -65,7 +66,7 @@ public class SecurityConfig {
 
     @Bean
     public AuthenticationEventPublisher authenticationEventPublisher(
-            org.springframework.context.ApplicationEventPublisher delegate) {
+            ApplicationEventPublisher delegate) {
         return new DefaultAuthenticationEventPublisher(delegate);
     }
 

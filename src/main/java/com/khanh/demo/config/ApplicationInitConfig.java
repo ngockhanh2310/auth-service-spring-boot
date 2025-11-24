@@ -16,7 +16,6 @@ import java.util.HashSet;
 @Configuration
 @RequiredArgsConstructor
 @Slf4j
-
 public class ApplicationInitConfig {
     private final PasswordEncoder passwordEncoder;
 
